@@ -57,6 +57,7 @@ const Page = () => {
               alt="Login Image"
               fill={true}
               className="m-auto"
+              loading="lazy"
             />
           </div>
         </div>
