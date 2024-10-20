@@ -19,6 +19,9 @@ import {
   Tooltip,
 } from "chart.js";
 import dynamic from 'next/dynamic'
+import { FiShoppingCart } from "react-icons/fi";
+import { AiOutlineDollarCircle, AiOutlineStock } from "react-icons/ai";
+import { PiUsersThreeBold } from "react-icons/pi";
 const TotalSalesChart = dynamic(() => import('@/components/TotalSalesChart'), {
   loading: () => <h1>Loading...</h1>
 });
@@ -69,6 +72,7 @@ const Page = () => {
                 bg_class="bg-dark_black"
                 title_color="text-custom_gray"
                 value_color="text-white"
+                icon={<FiShoppingCart className="text-white" />}
               />
               <MiniCard
                 title="Total Sales"
@@ -76,14 +80,16 @@ const Page = () => {
                   style: "currency",
                   currency: "USD",
                 }).format(95000)}
+                icon={<AiOutlineDollarCircle />}
               />
-              <MiniCard title="Total Customers" value="4570" />
+              <MiniCard title="Total Customers" value="4570"  icon={<PiUsersThreeBold />} />
               <MiniCard
                 title="Average Order Value"
                 value={new Intl.NumberFormat("en-US", {
                   style: "currency",
                   currency: "USD",
                 }).format(29000)}
+                icon={<AiOutlineStock />}
               />
             </div>
 

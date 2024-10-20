@@ -31,7 +31,7 @@ const Sidebar = ({ isSidebarActive, setIsSidebarActive }) => {
             <RxCross2 />
           </button>
           <Link href="/">
-            <Image src="/assets/logo.svg" alt="Logo" width={140} height={140} />
+            <Image src="/assets/main-logo.svg" alt="Logo" width={140} height={140} />
           </Link>
         </h1>
 
